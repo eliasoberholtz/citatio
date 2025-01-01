@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <meta
+            http-equiv="X-Content-Security-Policy"
+            content="default-src 'self'; script-src 'self'"
+        />
+        <title>Citatio - New Project</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <h1>Create New Project</h1>
+        <form>
+            <input type="text" title="Project name" value="Project name"><br>
+            <label>Save type</label><br>
+            <input type="radio" id="json" name="used_save_type" value="JSON">
+            <label for="json">JSON</label><br>
+            <input type="radio" id="binary" name="used_save_type" value="Binary">
+            <label for="binary">Binary</label><br>
+            <label>Citation type</label><br>
+            <input type="submit" onclick="onNewProjectClick()">
+        </form>
+    </body>
+    <script src="../renderer.js"></script>
+</html>

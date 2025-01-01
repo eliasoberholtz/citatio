@@ -9,19 +9,23 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        certificateFile: "./cert.pfx",
+        certificatePassword: process.env.CERTIFICATE_PASSWORD
+      },
     },
     {
       name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
+      platforms: ['darwin', 'linux'],
     },
     {
       name: '@electron-forge/maker-deb',
-      config: {},
-    },
-    {
-      name: '@electron-forge/maker-rpm',
-      config: {},
+      config: {
+        options: {
+          maintainer: "Elias Oberholtz",
+          homepage: "https://github.com/eliasoberholtz/citatio"
+        }
+      },
     },
   ],
   plugins: [
