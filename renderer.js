@@ -1,11 +1,6 @@
 const information = document.getElementById('info')
-information.innerText = `This app is using Chrome (v${versions.chrome()}), Node.js (v${versions.node()}), and Electron (v${versions.electron()})`
+information.innerText = `This app is using:\n- Chrome (v${versions.chrome()})\n- Node.js (v${versions.node()})\n- Electron (v${versions.electron()})`
 
-const onNewProjectClick = async () => {
-    const response = await window.versions.ping()
-    console.log("New project created")
-    
-    console.log(response)
-}
-
-onNewProjectClick()
+const NewProjectBtn = document.getElementById("NewProjectSubmit")
+const NewProjectName = document.getElementById("NewProjectName")
+const NewProjectSaveType = document.getElementById("SaveType")

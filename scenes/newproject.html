@@ -16,14 +16,14 @@
     <body>
         <h1>Create New Project</h1>
         <form>
-            <input type="text" title="Project name" value="Project name"><br>
+            <input id="NewProjectName" type="text" title="Project name" value="Project name"><br>
             <label>Save type</label><br>
-            <input type="radio" id="json" name="used_save_type" value="JSON">
-            <label for="json">JSON</label><br>
-            <input type="radio" id="binary" name="used_save_type" value="Binary">
-            <label for="binary">Binary</label><br>
+            <select id="SaveType">
+                <option value="json">.json</option>
+                <option value="cite">.cite</option>
+            </select><br>
             <label>Citation type</label><br>
-            <input type="submit" onclick="onNewProjectClick()">
+            <input type="submit" id="NewProjectSubmit">
         </form>
     </body>
     <script src="../renderer.js"></script>
